@@ -6,7 +6,6 @@ export class LoginController {
   @HttpCode(HttpStatus.OK)
   login(@Res() res): string {
     res.cookie('beamary-session-cookie', `session-${Math.random()}`, {
-      domain: 'vps669241.ovh.net',
       httpOnly: true,
     });
 

@@ -2,7 +2,11 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getHelloWithCookie(): string {
+    return 'Cookie detected :)';
+  }
+
+  getHelloWithoutCookie(): string {
+    return 'Cookie not detected :(';
   }
 }
