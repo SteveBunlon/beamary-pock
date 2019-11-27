@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHelloWithCookie(): string {
-    return 'Cookie detected :)';
+  getHelloWithCookie(sessionId): string {
+    return `Cookie detected :) Your current session : ${sessionId}`;
   }
 
   getHelloWithoutCookie(): string {

@@ -8,7 +8,7 @@ export class AppController {
   @Get()
   getHello(@Req() req): string {
     if (req.cookies['beamary-session-cookie']) {
-      return this.appService.getHelloWithCookie();
+      return this.appService.getHelloWithCookie(req.cookies['beamary-session-cookie']);
     } else {
       return this.appService.getHelloWithoutCookie();
     }
